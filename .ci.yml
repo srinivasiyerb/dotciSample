@@ -1,10 +1,12 @@
 environment:
    language: java
    services:
-      - google/mysql
+      - rldevops/redis-server
 
 
 
 build:
     run: echo hello world
 
+notifications: #list of notifications, notified ONLY on build fail and branch recovery.
+  - email: srinivasiyerb@gmail.com
