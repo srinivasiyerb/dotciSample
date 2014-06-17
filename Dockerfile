@@ -1,4 +1,2 @@
-FROM ubuntu:14.04
-
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends openjdk-7-jdk
+FROM centos
+RUN yum install -y java-1.7.0-openjdk-devel
