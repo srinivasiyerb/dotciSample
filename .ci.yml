@@ -1,7 +1,7 @@
 environment:
    language: java
    services:
-      - google/mysql
+      - rldevops/redis-server
 
 
 
