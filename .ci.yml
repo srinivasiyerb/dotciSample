@@ -4,4 +4,4 @@ environment:
     image:srinivasiyer/java_sshd_tomcat
 
 build:
-    run: echo hello world
+    run: srinivasiyer/java_sshd_tomcat
