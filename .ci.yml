@@ -1,7 +1,7 @@
 environment:
    language: java
   
-
+    image: srinivasiyer/java_sshd_tomcat
 
 build:
     run: echo hello world
