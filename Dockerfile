@@ -1,3 +1,3 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get -y install apache2
+FROM centos
+RUN yum -y update
+RUN yum -y install httpd
