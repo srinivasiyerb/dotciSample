@@ -1,9 +1,28 @@
 environment:
-   language: java
-   services:
-      - rldevops/redis-server
+   language: ruby     # always single value
 
+     language_versions:  # single value or list of values (extra row in build matrix)
+     - ree-1.8.7
+     - mri-1.8.7
+
+     packages: #extra arguments that passed into install_packages call
+      - memcached-1.4.5 
+   
 
 
 build:
-    run: echo hello world
+    build:
+  skip: true #skips build
+  before: # single command or list of commands (run serially on each matrix job)
+  - gem install -y rubygems-update
+  - update_rubygems
+
+  info: #print machine/environment diagnostics
+  - bundle --version
+  
+ run:         
+    unit:        bundle exec rake spec:units
+    integration: bundle exec rake spec:integration
+    acceptance:  # Each parallelized step can also have multiple serial commands
+    - bundle exec rake cucumber
+    - bundle exec rake cucumber:javascript
