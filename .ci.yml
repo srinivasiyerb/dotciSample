@@ -4,3 +4,7 @@ environment:
     image:< srinivasiyer/redis-server>
 
  services: srinivasiyer/redis-server
+
+
+   build:
+    run: echo hello world
