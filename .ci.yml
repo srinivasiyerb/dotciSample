@@ -3,5 +3,4 @@ environment:
   
     image:< srinivasiyer/redis-server>
 
- services: #list or single value 
-        - srinivasiyer/redis-server
+ services: srinivasiyer/redis-server
