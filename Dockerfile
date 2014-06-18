@@ -3,6 +3,6 @@ FROM ubuntu
 RUN apt-get -y update
 
 RUN apt-get -y install apache2
-
+ADD /opt/start_apache.sh /opt/start_apache.sh
 EXPOSE 80
-ENTRYPOINT ["service" "apache2" "start"]
+CMD ["/opt/start_apache.sh"]
