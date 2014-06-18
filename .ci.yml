@@ -1,10 +1,9 @@
 environment:
    language: java
-  
-    image:< srinivasiyer/redis-server>
-
- services: srinivasiyer/redis-server
+   services:
+      - google/mysql
 
 
-   build:
+
+build:
     run: echo hello world
