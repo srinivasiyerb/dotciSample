@@ -1,5 +1,5 @@
 environment:
-   language: ruby
+   language: java
    services:
       - google/mysql
 
