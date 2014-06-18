@@ -1,7 +1,7 @@
 environment:
    language: java
   
-    image:srinivasiyer/java_sshd_tomcat
+    image:< srinivasiyer/redis-server>
 
-build:
-    run: srinivasiyer/java_sshd_tomcat
+ services: #list or single value 
+        - srinivasiyer/redis-server
